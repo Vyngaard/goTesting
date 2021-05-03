@@ -4,6 +4,10 @@ import "testing"
 
 func TestHello(t *testing.T) {
 
+	//This helper func allows for rmore eadable code
+	//by reducing duplication within our tests
+	//the t.Helper() call changes where our
+	//error test points to make testing/debugging quicker
 	assertCorrectMessage := func(t testing.TB, got, want string) {
 		t.Helper()
 		if got != want {
